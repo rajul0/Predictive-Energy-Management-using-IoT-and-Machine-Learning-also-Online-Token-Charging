@@ -36,12 +36,10 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
     <br>
     <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/3acca84f-b873-49fd-893c-bb791aa9a158" alt="Halaman Beranda" width="200">
     <br>
-
   - Halaman riwayat penggunaan listrik
     <br>
     <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/1186fb5a-3c1e-4152-9727-95e0bb9cc7a3" alt="Halaman Beranda" width="200">
     <br>
-
   - Halaman Prediksi Penggunaan Litrik
     <br>
     <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/22d8ed06-2b4e-4995-a0aa-6ffcc2543dc0" alt="Halaman Beranda" width="200">
