@@ -24,6 +24,10 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
 
 ## UI Aplikasi
   - Halaman Login
+    
+    <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/ae2a4c56-4811-4b51-9184-9cd9427c300a" alt="Halaman Login" width="200">
+    
+  <br>
   ![image](https://github.com/rajul0/IntelliCharge/assets/89072211/ae2a4c56-4811-4b51-9184-9cd9427c300a)
 
   - Halaman Beranda
