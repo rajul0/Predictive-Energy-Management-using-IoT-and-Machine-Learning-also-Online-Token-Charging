@@ -18,8 +18,8 @@
   - Status listrik rumah secara real-time
 
 ## Source Code
-  - [Prediksi penggunaan beberapa hari kedepan](#https://github.com/allail-qadrillah/Predictive-Energy-Management-with-IoT-and-Machine-Learning-and-Online-Token-Replenishment/blob/master/electricity_prediction_CNN1D.ipynb)
-  - [Source Code Raspberry pi sebagai perangkat meteran listrik](#https://github.com/allail-qadrillah/Predictive-Energy-Management-using-IoT-and-Machine-Learning-also-Online-Token-Charging)
+  - [Prediksi penggunaan beberapa hari kedepan](https://github.com/allail-qadrillah/Predictive-Energy-Management-with-IoT-and-Machine-Learning-and-Online-Token-Replenishment/blob/master/electricity_prediction_CNN1D.ipynb)
+  - [Source Code Raspberry pi sebagai perangkat meteran listrik](https://github.com/allail-qadrillah/Predictive-Energy-Management-using-IoT-and-Machine-Learning-also-Online-Token-Charging)
   - Aplikasi sebagai tampilan pengguna untuk berinteraksi dengan meteran listrik(ini)
 
 ## Poster
