@@ -23,6 +23,7 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
   ![5d60aafe-19a2-48b2-b014-ee74058afae8](https://github.com/rajul0/IntelliCharge/assets/89072211/b962a92d-3a67-420e-9a2a-487cef214b10)
 
 ## UI Aplikasi
+<p align='center'>
   - Halaman Login
     <br>
     <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/ae2a4c56-4811-4b51-9184-9cd9427c300a" alt="Halaman Login" width="200">
@@ -45,6 +46,7 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
     <br>
     <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/22d8ed06-2b4e-4995-a0aa-6ffcc2543dc0" alt="Halaman Beranda" width="200">
     <br>
+</p>
 
 ## Video
 https://github.com/rajul0/IntelliCharge/assets/89072211/bca70908-7dc5-42ee-a52b-86a7bed517ea
