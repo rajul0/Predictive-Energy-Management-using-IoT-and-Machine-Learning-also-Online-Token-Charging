@@ -2,15 +2,18 @@
   Predictive-Energy-Management-using-IoT-and-Machine-Learning-also-Online-Token-Charging
 
 ## Nama Aplikasi
-  InteliCharge [Klik disini untuk download apk](#bit.ly/Intellicharge-app)
+  IntelliCharge [Klik disini untuk download apk](#bit.ly/Intellicharge-app)
 
 ## Deskripsi
 
-Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. Kami mengintegrasikan konektivitas Wi-Fi dan Machine Learning untuk meningkatkan proses pemantauan, pengisian ulang token, serta prediksi penggunaan listrik.
+  Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. Kami mengintegrasikan konektivitas Wi-Fi dan Machine Learning untuk meningkatkan proses pemantauan, pengisian ulang token, serta prediksi penggunaan listrik.
+
+## Extended Abstrak
+  https://bit.ly/Predictive-Energy-Management-with-IoT-and-Machine-Learning-A-Smart-Solution-for-Token-Recharge-and-Consumption-Optimization
 
 ## Fitur
   - Isi ulang token listrik secara online menggunakan perangkat mobile berbasis android
-  - Data penggunaan beberapa bulan ke belakang
+  - Catatan penggunaan beberapa bulan ke belakang
   - Prediksi penggunaan dalam beberapa hari ke depan( 1 hari, 3 hari, 7 hari, 14 hari, 21 hari, dan 1 bulan)
   - Status listrik rumah secara real-time
 
@@ -37,8 +40,6 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
 ## Video
 https://github.com/rajul0/IntelliCharge/assets/89072211/bca70908-7dc5-42ee-a52b-86a7bed517ea
 
-## Extended Abstrak
-  https://bit.ly/Predictive-Energy-Management-with-IoT-and-Machine-Learning-A-Smart-Solution-for-Token-Recharge-and-Consumption-Optimization
 
 
   
