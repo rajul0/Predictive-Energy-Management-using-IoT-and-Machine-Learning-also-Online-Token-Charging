@@ -24,7 +24,6 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
 
 ## UI Aplikasi
 <div style='display: flex;flex-wrap: wrap;margin: -10px;'>
-  <p align='center'>
     - Halaman Login
       <br>
       <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/ae2a4c56-4811-4b51-9184-9cd9427c300a" alt="Halaman Login" width="200">
@@ -45,7 +44,6 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
       <br>
       <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/22d8ed06-2b4e-4995-a0aa-6ffcc2543dc0" alt="Halaman Beranda" width="200">
       <br>
-  </p>
 </div>
 
 ## Video
