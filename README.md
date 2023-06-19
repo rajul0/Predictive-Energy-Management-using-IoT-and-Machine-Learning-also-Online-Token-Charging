@@ -26,7 +26,8 @@ Proyek ini bertujuan untuk mengembangkan solusi inovatif pada meteran prabayar. 
     - Halaman Login
       <br>
       <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/ae2a4c56-4811-4b51-9184-9cd9427c300a" alt="Halaman Login" width="200">
-      - Halaman Beranda
+      <br>
+    - Halaman Beranda
       <br>
       <img src="https://github.com/rajul0/IntelliCharge/assets/89072211/a34aeac9-dc7a-4179-9a0d-4d7fc2f8f2c9" alt="Halaman Beranda" width="200">
       <br>
