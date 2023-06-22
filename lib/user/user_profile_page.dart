@@ -69,13 +69,10 @@ class _UserProfilePageState extends State<UserProfilePage> {
   void _logout() async {
     await FirebaseAuth.instance.signOut();
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => LoginPageUser(),
-      ),
-    );
-    // kode setelah signout
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (BuildContext context) => LoginPageUser()),
+        (route) => false);
   }
 
   @override
