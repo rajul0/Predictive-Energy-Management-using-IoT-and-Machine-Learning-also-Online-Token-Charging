@@ -1,1 +1,40 @@
-
+{
+  "project_info": {
+    "project_number": "808535541325",
+    "firebase_url": "https://i3o-new-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "i3o-new",
+    "storage_bucket": "i3o-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808535541325:android:8f931d62b787b7fcf5fe04",
+        "android_client_info": {
+          "package_name": "com.example.i30_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808535541325-h33rba4k3uf2vs9linuu6uf74h31ppaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0oHRGDqBImv66KNHsV8WrRJezVvwQPEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808535541325-h33rba4k3uf2vs9linuu6uf74h31ppaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
