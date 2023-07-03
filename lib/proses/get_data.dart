@@ -1,4 +1,3 @@
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -25,21 +24,6 @@ Future<dynamic> getDataUser() async {
     userData['custName'] = doc['customer_name'];
     userData['idUser'] = doc['id_user'];
   });
-  saveLocal(userData);
-  return userData;
-}
-
-Future<void> saveLocal(data) async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setString('name', data['custName']);
-  await prefs.setString('id', data['custId']);
-}
-
-Future<dynamic> fetchLocal() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  var userData = {};
-  userData['custName'] = prefs.getString('name');
-  userData['custId'] = prefs.getString('id');
   return userData;
 }
 

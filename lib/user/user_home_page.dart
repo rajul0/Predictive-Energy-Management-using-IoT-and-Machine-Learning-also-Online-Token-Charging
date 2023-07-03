@@ -17,7 +17,7 @@ class HomePageUser extends StatefulWidget {
 }
 
 class _HomePageUserState extends State<HomePageUser> {
-  var dataUser = fetchLocal();
+  var dataUser = fetchData();
 
   static Future fetchData() async {
     // Kode untuk melakukan fetch data pada Future

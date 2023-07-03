@@ -10,7 +10,7 @@ class UserProfilePage extends StatefulWidget {
 }
 
 class _UserProfilePageState extends State<UserProfilePage> {
-  var dataUser = fetchLocal();
+  var dataUser = fetchData();
   //fungsi ambil data user
   static Future fetchData() async {
     // Kode untuk melakukan fetch data pada Future

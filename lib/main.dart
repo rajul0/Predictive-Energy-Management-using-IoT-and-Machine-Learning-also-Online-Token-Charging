@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:i30_app/user/login_user_page.dart';
 import 'package:i30_app/user/user_home_page.dart';
@@ -16,11 +15,7 @@ void main() async {
 }
 
 Future<bool> checkLoginStatus() async {
-  // SharedPreferences prefs = await SharedPreferences.getInstance();
-  // bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-
-  // print(isLoggedIn);
-  // return isLoggedIn;
+  // hanya butuh sekali login
   User? user = FirebaseAuth.instance.currentUser;
   return user != null;
 }
