@@ -1,6 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:i30_app/user/register_user_page.dart';
+import 'package:i30_app/proses/get_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:i30_app/user/user_home_page.dart';
 
 class LoginPageUser extends StatefulWidget {
@@ -24,10 +25,13 @@ class _LoginPageUserState extends State<LoginPageUser> {
 
   void login(custId, custName) async {
     final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+    getDataUser();
     try {
       custName = custName + '@e.com';
       await firebaseAuth.signInWithEmailAndPassword(
           email: custName, password: custId);
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('isLoggedIn', true);
       setState(() {
         _errorMessage = '';
       });
