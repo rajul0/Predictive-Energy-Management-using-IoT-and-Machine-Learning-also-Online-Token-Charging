@@ -100,7 +100,7 @@ class _HomePageUserState extends State<HomePageUser> {
                         Row(
                           children: [
                             Text(
-                              'Lets start fill your tokens by this app',
+                              'Ayo isi token listrik anda',
                               style: TextStyle(
                                 color: Color(0xFFF9F9F9),
                                 fontFamily: 'InriaSans',
@@ -136,7 +136,7 @@ class _HomePageUserState extends State<HomePageUser> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'What’s your can do',
+                    'Apa yang dapat anda lakukan',
                     style: TextStyle(
                       color: Color(0xFF484848),
                       fontFamily: 'InriaSans',
@@ -153,7 +153,7 @@ class _HomePageUserState extends State<HomePageUser> {
                     children: [
                       buildFeatureBtn(
                         context,
-                        'Refill Tokens',
+                        'Isi Token',
                         'assets/img/refill_tokens_icon.png',
                         () {
                           Navigator.push(
@@ -165,7 +165,7 @@ class _HomePageUserState extends State<HomePageUser> {
                       ),
                       buildFeatureBtn(
                         context,
-                        'Usage',
+                        'Penggunaan',
                         'assets/img/usage_icon.png',
                         () {
                           Navigator.push(
@@ -181,7 +181,7 @@ class _HomePageUserState extends State<HomePageUser> {
                       ),
                       buildFeatureBtn(
                         context,
-                        'Prediction',
+                        'Prediksi',
                         'assets/img/prediction.png',
                         () {
                           Navigator.push(
@@ -205,27 +205,27 @@ class _HomePageUserState extends State<HomePageUser> {
                       padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          electricityData(context, 'Lead Token [Rp]',
+                          electricityData(context, 'Sisa Token [Rp]',
                               'harga_token', '', true),
                           SizedBox(
                             height: 10.0,
                           ),
                           electricityData(
-                              context, 'Voltage [V]', 'tegangan', 'V', false),
+                              context, 'Tegangan [V]', 'tegangan', 'V', false),
                           SizedBox(
                             height: 10.0,
                           ),
                           electricityData(
-                              context, 'Current [A]', 'arus', 'A', false),
+                              context, 'Arus [A]', 'arus', 'A', false),
                           SizedBox(
                             height: 10.0,
                           ),
                           electricityData(
-                              context, 'Power [W]', 'daya', 'W', false),
+                              context, 'Daya [W]', 'daya', 'W', false),
                           SizedBox(
                             height: 10.0,
                           ),
-                          electricityData(context, 'Frequency [Hz]',
+                          electricityData(context, 'Frekuensi [Hz]',
                               'frekuensi', 'Hz', false),
                         ],
                       ),
@@ -287,7 +287,7 @@ class _NavbarBtmUserState extends State<NavbarBtmUser> {
                     height: 40,
                     child: Image.asset('assets/img/homeIcon.png'),
                   ),
-            label: 'Home',
+            label: 'Beranda',
           ),
           BottomNavigationBarItem(
             icon: _selectedIndex ==
@@ -300,7 +300,7 @@ class _NavbarBtmUserState extends State<NavbarBtmUser> {
                     height: 40,
                     child: Image.asset('assets/img/profileIcon.png'),
                   ),
-            label: 'Profile',
+            label: 'Profil',
           ),
         ],
         currentIndex: _selectedIndex,

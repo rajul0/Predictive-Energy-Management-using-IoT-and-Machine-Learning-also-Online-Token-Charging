@@ -8,7 +8,7 @@ Future popUpBerhasilRfl(context) {
       builder: (BuildContext context) {
         return SimpleDialog(
           title: Text(
-            'Refill Successfully',
+            'Isi Token Berhasil',
             textAlign: TextAlign.center,
           ),
           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 10.0),

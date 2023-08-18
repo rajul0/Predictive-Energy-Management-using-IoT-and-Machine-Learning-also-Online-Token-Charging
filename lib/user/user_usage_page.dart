@@ -48,7 +48,7 @@ class _UserUsagePageState extends State<UserUsagePage> {
                 children: <Widget>[
                   SizedBox(height: 40.0),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
@@ -60,17 +60,17 @@ class _UserUsagePageState extends State<UserUsagePage> {
                           child: Image.asset('assets/img/back.png'),
                         ),
                       ),
-                      SizedBox(
-                        width: 40,
-                      ),
                       Text(
-                        'Usage',
+                        'Penggunaan',
                         style: TextStyle(
                           fontFamily: 'InriaSans',
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF484848),
                         ),
+                      ),
+                      SizedBox(
+                        height: 7,
                       ),
                     ],
                   ),
@@ -96,7 +96,7 @@ class _UserUsagePageState extends State<UserUsagePage> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Please wait, fetching data on progress'),
+                          Text('Harap Tunggu, data penggunaan sedang diproses'),
                         ],
                       );
                     } else if (snapshot.hasError) {
@@ -106,7 +106,7 @@ class _UserUsagePageState extends State<UserUsagePage> {
                       return Text(
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
-                        "Your Electric Meter has no usage yet",
+                        "Meteran Listrik anda belum ada riwayat penggunaan",
                         style: TextStyle(
                             fontFamily: 'Inria Sans',
                             fontSize: 14.0,

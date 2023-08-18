@@ -50,7 +50,7 @@ class _UserPredictionResultState extends State<UserPredictionResult> {
                 children: <Widget>[
                   SizedBox(height: 40.0),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
@@ -62,17 +62,17 @@ class _UserPredictionResultState extends State<UserPredictionResult> {
                           child: Image.asset('assets/img/back.png'),
                         ),
                       ),
-                      SizedBox(
-                        width: 40,
-                      ),
                       Text(
-                        'Prediction',
+                        'Prediksi',
                         style: TextStyle(
                           fontFamily: 'InriaSans',
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF484848),
                         ),
+                      ),
+                      SizedBox(
+                        height: 7,
                       ),
                     ],
                   ),
@@ -98,7 +98,7 @@ class _UserPredictionResultState extends State<UserPredictionResult> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text('Please wait, making predictions'),
+                          Text('Mohon menunggu, prediksi sedang dalam proses'),
                         ],
                       );
                     } else if (snapshot.hasError) {

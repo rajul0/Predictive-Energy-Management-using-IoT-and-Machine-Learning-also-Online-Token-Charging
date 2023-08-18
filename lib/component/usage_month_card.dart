@@ -4,18 +4,18 @@ import 'package:intl/intl.dart';
 Widget buildUsageCard(
     BuildContext context, String month, kwh, price, VoidCallback onPressed) {
   var _singkatMonth = {
-    'January': 'Jan',
-    'February': 'Feb',
-    'March': 'Mar',
+    'Januari': 'Jan',
+    'Februari': 'Feb',
+    'Maret': 'Mar',
     'April': 'Apr',
-    'May': 'May',
-    'June': 'Jun',
-    'July': 'Jul',
-    'August': 'Aug',
+    'Mei': 'Mei',
+    'Juni': 'Jun',
+    'Juli': 'Jul',
+    'Agustus': 'Ags',
     'September': 'Sept',
-    'October': 'Oct',
+    'Oktober': 'Okt',
     'November': 'Nov',
-    'December': 'Dec'
+    'Desember': 'Des'
   };
   var currencyFormat = NumberFormat.currency(
     symbol: "Rp",

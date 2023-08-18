@@ -28,7 +28,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
         builder: (BuildContext context) {
           return SimpleDialog(
             title: Text(
-              'Are you sure to exit?',
+              'Anda yakin ingin keluar?',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'InriaSans',
@@ -48,7 +48,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                 onPressed: () {
                   _logout();
                 },
-                child: Text("OK"),
+                child: Text("Ya"),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -58,7 +58,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("Cancel"),
+                child: Text("Tidak"),
               ),
             ],
           );
@@ -178,7 +178,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                 Icons.logout,
                 color: Color(0xFF28A8E0),
               ),
-              label: Text('Logout',
+              label: Text('Keluar',
                   style: TextStyle(
                     fontFamily: 'InriaSans',
                     fontWeight: FontWeight.bold,

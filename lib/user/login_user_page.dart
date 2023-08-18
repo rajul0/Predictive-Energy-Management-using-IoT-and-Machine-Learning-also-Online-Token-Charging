@@ -42,7 +42,8 @@ class _LoginPageUserState extends State<LoginPageUser> {
       );
     } on FirebaseAuthException catch (error) {
       setState(() {
-        _errorMessage = 'Invalid Customer ID , Name, or be careful spaces';
+        _errorMessage =
+            'ID Pelanggan dan Nama yg anda masukkan salah atau hati-hati dengan spasi';
       });
     }
   }
@@ -56,56 +57,104 @@ class _LoginPageUserState extends State<LoginPageUser> {
       backgroundColor: Color(0xFFF9F9F9),
       body: Padding(
         padding: EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Image(
-              image: AssetImage('assets/img/logoApp.png'),
-              width: 200,
-              height: 200,
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            const Text(
-              'LOG IN',
-              style: TextStyle(
-                  fontFamily: 'InriaSans',
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF484848),
-                  fontSize: 24),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              width: double.infinity,
-              child: Text(
-                _errorMessage,
-                style: TextStyle(
-                  fontFamily: 'InriaSans',
-                  fontSize: 14.0,
-                  color: Colors.red,
-                ),
-                textAlign: TextAlign.center,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Image(
+                image: AssetImage('assets/img/logoApp.png'),
+                width: 200,
+                height: 200,
               ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            TextField(
-              onChanged: (value) {
-                setState(() {
-                  _custId = value;
-                  _errorMessage = '';
-                });
-              },
-              decoration: InputDecoration(
-                  labelText: 'Customer ID',
+              const SizedBox(
+                height: 40,
+              ),
+              const Text(
+                'MASUK',
+                style: TextStyle(
+                    fontFamily: 'InriaSans',
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF484848),
+                    fontSize: 24),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: double.infinity,
+                child: Text(
+                  _errorMessage,
+                  style: TextStyle(
+                    fontFamily: 'InriaSans',
+                    fontSize: 14.0,
+                    color: Colors.red,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              TextField(
+                onChanged: (value) {
+                  setState(() {
+                    _custId = value;
+                    _errorMessage = '';
+                  });
+                },
+                decoration: InputDecoration(
+                    labelText: 'ID Pelanggan',
+                    labelStyle: TextStyle(
+                      color: Color(0xFF28A8E0),
+                    ),
+                    hintText: 'Masukkan ID Pelanggan',
+                    prefixIcon: Row(mainAxisSize: MainAxisSize.min, children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                          height: 24,
+                          width: 24,
+                          child: Image.asset('assets/img/cust_id_icon.png')),
+                      SizedBox(
+                        width: 10,
+                      )
+                    ]),
+                    prefixIconConstraints: BoxConstraints(
+                      minWidth: 0,
+                      minHeight: 0,
+                    ),
+                    contentPadding: EdgeInsets.only(top: 8, bottom: 8),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      borderSide: BorderSide(color: Color(0xFF28A8E0)),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        borderSide: BorderSide(color: Color(0xFF28A8E0))),
+                    focusedBorder: (OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        borderSide: BorderSide(color: Color(0xFF28A8E0))))),
+                style: TextStyle(
+                    fontFamily: 'InriaSans',
+                    fontSize: 16,
+                    color: Color(0xFF484848)),
+              ),
+              SizedBox(height: 20),
+              TextField(
+                obscureText: _passwordVisible,
+                onChanged: (value) {
+                  setState(() {
+                    _custName = value;
+                    _errorMessage = '';
+                  });
+                },
+                decoration: InputDecoration(
+                  labelText: 'Nama Pelanggan',
                   labelStyle: TextStyle(
                     color: Color(0xFF28A8E0),
                   ),
-                  hintText: 'Enter your Customer ID',
+                  hintText: 'Masukkan Nama Pelanggan',
                   prefixIcon: Row(mainAxisSize: MainAxisSize.min, children: [
                     SizedBox(
                       width: 20,
@@ -132,86 +181,40 @@ class _LoginPageUserState extends State<LoginPageUser> {
                       borderSide: BorderSide(color: Color(0xFF28A8E0))),
                   focusedBorder: (OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                      borderSide: BorderSide(color: Color(0xFF28A8E0))))),
-              style: TextStyle(
-                  fontFamily: 'InriaSans',
-                  fontSize: 16,
-                  color: Color(0xFF484848)),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              obscureText: _passwordVisible,
-              onChanged: (value) {
-                setState(() {
-                  _custName = value;
-                  _errorMessage = '';
-                });
-              },
-              decoration: InputDecoration(
-                labelText: 'Customer Name',
-                labelStyle: TextStyle(
-                  color: Color(0xFF28A8E0),
+                      borderSide: BorderSide(color: Color(0xFF28A8E0)))),
                 ),
-                hintText: 'Enter your Customer Name',
-                prefixIcon: Row(mainAxisSize: MainAxisSize.min, children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  SizedBox(
-                      height: 24,
-                      width: 24,
-                      child: Image.asset('assets/img/cust_id_icon.png')),
-                  SizedBox(
-                    width: 10,
-                  )
-                ]),
-                prefixIconConstraints: BoxConstraints(
-                  minWidth: 0,
-                  minHeight: 0,
-                ),
-                contentPadding: EdgeInsets.only(top: 8, bottom: 8),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                  borderSide: BorderSide(color: Color(0xFF28A8E0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    borderSide: BorderSide(color: Color(0xFF28A8E0))),
-                focusedBorder: (OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    borderSide: BorderSide(color: Color(0xFF28A8E0)))),
-              ),
-              style: TextStyle(
-                  fontFamily: 'InriaSans',
-                  fontSize: 16,
-                  color: Color(0xFF484848)),
-            ),
-            SizedBox(height: 42),
-            SizedBox(
-              width: double.infinity,
-              height: 38.0,
-              child: ElevatedButton(
-                onPressed: () {
-                  login(_custId, _custName);
-                },
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  elevation: 5.0,
-                  backgroundColor: Color(0xFF28A8E0),
-                ),
-                child: Text(
-                  'Log In',
-                  style: TextStyle(
+                style: TextStyle(
                     fontFamily: 'InriaSans',
-                    fontSize: 16.0,
-                    color: Colors.white,
+                    fontSize: 16,
+                    color: Color(0xFF484848)),
+              ),
+              SizedBox(height: 42),
+              SizedBox(
+                width: double.infinity,
+                height: 38.0,
+                child: ElevatedButton(
+                  onPressed: () {
+                    login(_custId, _custName);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    elevation: 5.0,
+                    backgroundColor: Color(0xFF28A8E0),
+                  ),
+                  child: Text(
+                    'Masuk',
+                    style: TextStyle(
+                      fontFamily: 'InriaSans',
+                      fontSize: 16.0,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

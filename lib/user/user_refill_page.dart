@@ -39,7 +39,7 @@ class _UserRefillPageState extends State<UserRefillPage> {
         refillToken(_tokenNumber);
         popUpBerhasilRfl(context);
       } else if (_formKey.currentState!.validate() &&
-          cekToken == 'Invalid Token Number') {
+          cekToken == 'Nomor Token tidak Valid') {
         setState(() {
           _errorMessage = cekToken;
         });
@@ -64,15 +64,14 @@ class _UserRefillPageState extends State<UserRefillPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF9F9F9),
-      body: Padding(
-        padding: EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
+            children: [
               SizedBox(height: 40.0),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
@@ -84,17 +83,20 @@ class _UserRefillPageState extends State<UserRefillPage> {
                       child: Image.asset('assets/img/back.png'),
                     ),
                   ),
-                  SizedBox(
-                    width: 40,
-                  ),
-                  Text(
-                    'Refill Token',
-                    style: TextStyle(
-                      fontFamily: 'InriaSans',
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF484848),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Isi Token',
+                      style: TextStyle(
+                        fontFamily: 'InriaSans',
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF484848),
+                      ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 7,
                   ),
                 ],
               ),
@@ -125,9 +127,9 @@ class _UserRefillPageState extends State<UserRefillPage> {
                       keyboardType: TextInputType.number,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Token Number cannot be empty';
+                          return 'Nomor Token tidak boleh kosong';
                         } else if (value.contains(' ')) {
-                          return 'There are spaces in your input';
+                          return 'Terdapat spasi pada inputan anda';
                         }
                         return null;
                       },
@@ -138,11 +140,11 @@ class _UserRefillPageState extends State<UserRefillPage> {
                         });
                       },
                       decoration: InputDecoration(
-                          labelText: 'Token Number',
+                          labelText: 'Nomor Token',
                           labelStyle: TextStyle(
                             color: Color(0xFF28A8E0),
                           ),
-                          hintText: 'Enter token number',
+                          hintText: 'Masukkan Nomor Token',
                           prefixIcon: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -206,7 +208,7 @@ class _UserRefillPageState extends State<UserRefillPage> {
                               backgroundColor: Color(0xFF28A8E0),
                             ),
                             child: Text(
-                              'Accept',
+                              'Isi',
                               style: TextStyle(
                                 fontFamily: 'InriaSans',
                                 fontSize: 16.0,
