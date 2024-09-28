@@ -42,7 +42,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF28A8E0),
+                  backgroundColor: Color(0xFF28A8E0),
                   elevation: 0,
                 ),
                 onPressed: () {
@@ -52,7 +52,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
+                  backgroundColor: Colors.red,
                   elevation: 0,
                 ),
                 onPressed: () {
@@ -187,7 +187,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                   )),
               style: ElevatedButton.styleFrom(
                 elevation: 0,
-                primary: Color(0xFFF9F9F9),
+                backgroundColor: Color(0xFFF9F9F9),
               ),
             ),
           ],
