@@ -20,7 +20,10 @@ Future popUpBerhasilRfl(context) {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => NavbarBtmUser()));
               },
-              child: Text("OK"),
+              child: Text(
+                "OK",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         );

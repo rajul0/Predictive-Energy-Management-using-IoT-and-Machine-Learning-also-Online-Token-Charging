@@ -10,9 +10,7 @@ class LoginPageUser extends StatefulWidget {
 }
 
 class _LoginPageUserState extends State<LoginPageUser> {
-  final TextEditingController _passwordController = TextEditingController();
   bool _passwordVisible = false;
-  bool _isPasswordValid = true;
 
   void _togglePasswordVisibility() {
     setState(() {
@@ -40,7 +38,7 @@ class _LoginPageUserState extends State<LoginPageUser> {
         context,
         MaterialPageRoute(builder: (context) => NavbarBtmUser()),
       );
-    } on FirebaseAuthException catch (error) {
+    } on FirebaseAuthException catch (_) {
       setState(() {
         _errorMessage =
             'ID Pelanggan dan Nama yg anda masukkan salah atau hati-hati dengan spasi';

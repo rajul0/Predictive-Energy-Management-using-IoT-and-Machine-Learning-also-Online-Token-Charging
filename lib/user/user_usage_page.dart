@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:i30_app/component/usage_month_card.dart';
-import 'package:intl/intl.dart';
 
 import '../proses/get_data.dart';
 
@@ -16,16 +12,6 @@ class UserUsagePage extends StatefulWidget {
 }
 
 class _UserUsagePageState extends State<UserUsagePage> {
-  // nyimpan error message
-  String _errorMessage = '';
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseStorage _storage = FirebaseStorage.instance;
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
-
-  final _formKey = GlobalKey<FormState>();
-  AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
-
   // Fungsi ngambil data prediction customer
   static Future<List> fetchData() async {
     var data = getUsageAllMonth();

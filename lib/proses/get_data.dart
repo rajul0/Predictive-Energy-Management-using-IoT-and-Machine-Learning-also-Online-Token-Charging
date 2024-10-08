@@ -54,10 +54,6 @@ Future<List> getDataRflHistory() async {
 }
 
 Future<List> getPrediction(custId) async {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  User? user = _auth.currentUser;
-  String? _userId = user?.uid;
   List hasil = [];
   // Mendapatkan referensi ke koleksi "users"
   CollectionReference users =
@@ -120,7 +116,7 @@ Future<List> fetchDataPredict() async {
 
   for (int w in waktu) {
     var url = Uri.parse(
-        'https://i30-api.kroengprojects.repl.co/predict?day=$w'); // Url API
+        'https://fcd19486-5bda-4d78-8e06-4f5770d6a9cb-00-34wcxdp4o6lsy.kirk.replit.dev/predict?day=$w'); // Url API
 
     try {
       var response =

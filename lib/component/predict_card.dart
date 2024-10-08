@@ -16,7 +16,7 @@ Widget buildPredictCard(BuildContext context, String waktu, kwh, price,
     onTap: onPressed,
     child: SizedBox(
       width: double.infinity,
-      height: 62,
+      height: 70,
       child: Container(
         child: Column(
           children: [

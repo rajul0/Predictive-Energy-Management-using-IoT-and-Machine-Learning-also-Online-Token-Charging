@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:i30_app/component/usage_month_card.dart';
-import 'package:i30_app/proses/proses.dart';
-import 'package:intl/intl.dart';
 
 import '../component/predict_card.dart';
 import '../proses/get_data.dart';
@@ -18,16 +12,6 @@ class UserPredictionResult extends StatefulWidget {
 }
 
 class _UserPredictionResultState extends State<UserPredictionResult> {
-  // nyimpan error message
-  String _errorMessage = '';
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseStorage _storage = FirebaseStorage.instance;
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
-
-  final _formKey = GlobalKey<FormState>();
-  AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
-
   // Fungsi ngambil data prediction customer
   static Future fetchData() async {
     var data = fetchDataPredict();
@@ -94,7 +78,9 @@ class _UserPredictionResultState extends State<UserPredictionResult> {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return Column(
                         children: [
-                          CircularProgressIndicator(),
+                          CircularProgressIndicator(
+                            color: Color(0xFF28A8E0),
+                          ),
                           SizedBox(
                             height: 20,
                           ),
@@ -104,7 +90,9 @@ class _UserPredictionResultState extends State<UserPredictionResult> {
                     } else if (snapshot.hasError) {
                       // Ketika terjadi error dalam pengambilan data
                       return Text('Error: ${snapshot.error}');
-                    } else if (!snapshot.hasData || snapshot.data.isEmpty) {
+                    } else if (!snapshot.hasData ||
+                        snapshot.data.isEmpty ||
+                        snapshot.data == []) {
                       return Text(
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
