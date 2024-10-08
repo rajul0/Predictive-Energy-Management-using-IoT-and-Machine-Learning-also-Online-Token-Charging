@@ -30,7 +30,7 @@ Widget buildUsageCard(
     onTap: onPressed,
     child: SizedBox(
       width: double.infinity,
-      height: 62,
+      height: 72,
       child: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

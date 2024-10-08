@@ -20,6 +20,7 @@ Future<bool> checkLoginStatus() async {
   return user != null;
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
   var isLoggedIn;
 

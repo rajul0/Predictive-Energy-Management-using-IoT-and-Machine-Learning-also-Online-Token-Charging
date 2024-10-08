@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:i30_app/component/build_card_data_electricity.dart';
 import 'package:i30_app/component/feature_btn.dart';
@@ -30,9 +28,6 @@ class _HomePageUserState extends State<HomePageUser> {
 
   void _usagePage(token) async {
     try {
-      var custId;
-      var data = fetchData();
-      data.then((value) => custId = value['custId']);
       await Future.delayed(Duration(seconds: 2));
     } catch (error) {
       setState(() {});
@@ -246,8 +241,6 @@ class NavbarBtmUser extends StatefulWidget {
 
 class _NavbarBtmUserState extends State<NavbarBtmUser> {
   int _selectedIndex = 0;
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   final List<String> _imgIcons = [
     'assets/img/homeIcon.png',

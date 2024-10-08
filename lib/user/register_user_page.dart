@@ -77,6 +77,7 @@ class _RegisterUserPageState extends State<RegisterUserPage> {
         });
       } else {}
     }
+    return null;
   }
 
   // fullname, email,dan password yang diinput
@@ -84,7 +85,6 @@ class _RegisterUserPageState extends State<RegisterUserPage> {
   String _fullName = '';
   String _email = '';
   String _password = '';
-  String _confirmPassword = '';
 
   @override
   Widget build(BuildContext context) {
@@ -348,11 +348,7 @@ class _RegisterUserPageState extends State<RegisterUserPage> {
                         }
                         return null;
                       },
-                      onChanged: (value) {
-                        setState(() {
-                          _confirmPassword = value;
-                        });
-                      },
+                      onChanged: (value) {},
                       decoration: InputDecoration(
                         labelText: 'Confirm Password',
                         labelStyle: TextStyle(

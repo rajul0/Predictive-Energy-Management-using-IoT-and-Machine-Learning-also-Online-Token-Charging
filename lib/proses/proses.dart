@@ -1,13 +1,8 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 Future<List> checkToken(tokenNumber) async {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  User? user = _auth.currentUser;
-  String? _userId = user?.uid;
   List hasil = [];
   // Mendapatkan referensi ke koleksi "users"
   CollectionReference users = FirebaseFirestore.instance.collection('token');
@@ -26,10 +21,6 @@ Future<List> checkToken(tokenNumber) async {
 }
 
 Future<List> refillToken(tokenNumber) async {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  User? user = _auth.currentUser;
-  String? _userId = user?.uid;
   List hasil = [];
   // Mendapatkan referensi ke koleksi "users"
   CollectionReference users = FirebaseFirestore.instance.collection('token');

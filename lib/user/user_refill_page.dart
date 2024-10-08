@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:i30_app/component/pop_up_berhasil_rfl.dart';
 
 import '../proses/get_data.dart';
@@ -15,10 +12,6 @@ class UserRefillPage extends StatefulWidget {
 class _UserRefillPageState extends State<UserRefillPage> {
   // nyimpan error message
   String _errorMessage = '';
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseStorage _storage = FirebaseStorage.instance;
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   final _formKey = GlobalKey<FormState>();
   AutovalidateMode _autoValidateMode = AutovalidateMode.disabled;
@@ -39,15 +32,17 @@ class _UserRefillPageState extends State<UserRefillPage> {
         refillToken(_tokenNumber);
         popUpBerhasilRfl(context);
       } else if (_formKey.currentState!.validate() &&
-          cekToken == 'Nomor Token tidak Valid') {
+          cekToken == 'Invalid Token Number') {
         setState(() {
           _errorMessage = cekToken;
         });
+        print(_errorMessage);
       }
     } catch (error) {
       setState(() {
         _errorMessage = '${error}';
       });
+      print(_errorMessage);
     }
   }
 
@@ -188,34 +183,31 @@ class _UserRefillPageState extends State<UserRefillPage> {
                     SizedBox(
                       height: 40.0,
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 29.0,
-                      child: Align(
-                        alignment: Alignment.topRight,
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          _refill();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          elevation: 0,
+                          backgroundColor: Color(0xFF28A8E0),
+                        ),
                         child: SizedBox(
-                          width: 79.0,
                           height: 29.0,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              _refill();
-                            },
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              elevation: 0,
-                              backgroundColor: Color(0xFF28A8E0),
+                          width: 59.0,
+                          child: Text(
+                            'Isi',
+                            style: TextStyle(
+                              fontFamily: 'InriaSans',
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
-                            child: Text(
-                              'Isi',
-                              style: TextStyle(
-                                fontFamily: 'InriaSans',
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
