@@ -1,5 +1,5 @@
 ## Judul Proyek
-  Predictive-Energy-Management-using-IoT-and-Machine-Learning-also-Online-Token-Charging
+  Predictive-Energy-Management-using-IoT-and-Machine-Learning-also-Online-Token-Charging (INTELLICHARGE-APP)
 
 ## Nama Aplikasi
   IntelliCharge [Klik disini untuk download apk](#bit.ly/Intellicharge-app)
